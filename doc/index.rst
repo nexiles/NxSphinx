@@ -1,25 +1,30 @@
-.. sphinxtest documentation master file, created by
-   sphinx-quickstart on Mon May 23 16:19:39 2011.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+=================================================
+Welcome to the nexiles GmbH Documentation Project
+=================================================
 
-Welcome to sphinxtest's documentation!
-======================================
+Abstract
+========
 
-Contents:
+This document captures the *rules* and *format* of *code and developer*
+documentation at **nexiles GmbH**.
+
+There's also a *how-to* for developers -- there'll be *never* a excuse to not
+write a documantation again, guys.
+
+Additionally, these pages are used to demo and test the **CSS theme** of
+thedocumentation.
+
+Content
+=======
 
 .. toctree::
    :maxdepth: 2
 
-   intro
-   misc/tutorial
-
-.. automodule:: useful_1
-   :members:
-
-.. automodule:: useful_2
-   :members:
-   :undoc-members:
+   introduction
+   requirements
+   deliverables
+   tutorial
+   changelog
 
 Indices and tables
 ==================
