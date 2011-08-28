@@ -6,6 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
+GH_PAGES      = "~/develop/nexiles/NxSphinx_gh_pages"
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -38,6 +39,11 @@ view:
 publish: html
 	@echo "Publishing internal ... https://static.nexiles.de/nxsphinx"
 	@scp -r $(BUILDDIR)/html/* silverdwarf:/srv/static/nxsphinx
+
+public: html publish
+	@echo "Preparing to publish **externally** ... http://nexiles.github.com/NxSphinx"
+	@cp -r $(BUILDDIR)/html/* $(GH_PAGES)
+	@echo "please review and then add and push in $(GH_PAGES)
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
