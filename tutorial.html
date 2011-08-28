@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tutorial &mdash; nxsphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/nexiles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="nxsphinx v0.1 documentation" href="index.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Deliverables" href="deliverables.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="deliverables.html" title="Deliverables"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">nxsphinx v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Author:</th><td class="field-body">Stefan Eletzhofer</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><em>sphinx</em> installed &#8211; please refer to <a class="reference external" href="http://sphinx.pocoo.org/index.html">their docs</a>.
+basically, it boils down to do:</p>
+<div class="highlight-python"><pre>$ workon my_project
+$ pip install sphinx</pre>
+</div>
+</li>
+<li><p class="first">You need to have the <cite>NxSphinx</cite> project cloned to
+<cite>$HOME/develop/nexiles</cite>.  This allows for unified theme configuration and
+is a single place where you can pull for theme updates:</p>
+<div class="highlight-python"><pre>$ cd
+$ mkdir -p ~/develop/nexiles
+$ cd ~/develop/nexiles
+$ git clone git@github.com:nexiles/NxSphinx.git</pre>
+</div>
+</li>
+<li><p class="first">Get to your administrator and have him create the directory where you
+internally publish the documentation for your project.  This is a standard
+path and it is <cite>silverdwarf:/srv/static/nxyourprojectnamehere</cite>.</p>
+<p>Have him set the directory to group-writable, the group must be <cite>staff</cite>,
+and the owner of the directory should be you.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bootstrap-sphinx">
+<h3>Bootstrap Sphinx<a class="headerlink" href="#bootstrap-sphinx" title="Permalink to this headline">¶</a></h3>
+<p>Switch to your repository, make a <cite>doc</cite> top-level directory and use
+<cite>sphinx-quickstart</cite> to bootstrap:</p>
+<div class="highlight-python"><pre>$ cd my_repo
+$ mkdir doc
+$ cd doc
+$ sphinx-quickstart
+...answer interactive questions...
+$ git add conf.py Makefile *.rst
+$ git ci -m "sphinx quickstart output"</pre>
+</div>
+</div>
+<div class="section" id="configure-python-path">
+<h3>Configure Python Path<a class="headerlink" href="#configure-python-path" title="Permalink to this headline">¶</a></h3>
+<p>You then need to adapt <cite>conf.py</cite>.  You need to edit:</p>
+<ul>
+<li><p class="first">Your <em>project name</em></p>
+</li>
+<li><p class="first">Set the <em>author</em> to be <cite>nexiles GmbH</cite></p>
+</li>
+<li><p class="first">set up the <cite>python path</cite> in <cite>conf.py</cite> to include your <em>python source</em> if
+you have &#8211; e.g, in a standard setup where the source is in the top-level
+<cite>src</cite> directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&#39;../src&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="set-nexiles-theme">
+<h3>Set nexiles theme<a class="headerlink" href="#set-nexiles-theme" title="Permalink to this headline">¶</a></h3>
+<p>Add / edit the following in <cite>conf.py</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~/develop/nexiles/NxSphinx/doc&quot;</span><span class="p">)]</span>
+<span class="n">html_logo</span> <span class="o">=</span> <span class="s">&quot;nexiles_theme/static/nexiles_logo_white.png&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="amend-makefile">
+<h3>Amend Makefile<a class="headerlink" href="#amend-makefile" title="Permalink to this headline">¶</a></h3>
+<p>Copy the <cite>Makefile</cite> over from the <cite>NxSphinx</cite> package, and edit the
+paths used for the <cite>publish</cite> and <cite>public</cite> targets.  You should be able
+to just search and replace <cite>NxSphinx</cite> and <cite>nxsphinx</cite> with your project
+codename.</p>
+</div>
+</div>
+<div class="section" id="create-mandatory-pages">
+<h2>Create Mandatory Pages<a class="headerlink" href="#create-mandatory-pages" title="Permalink to this headline">¶</a></h2>
+<p>Copy these <cite>.rst</cite> files over from the <cite>NxSphinx</cite> project:</p>
+<ul class="simple">
+<li>index.rst</li>
+<li>introduction.rst</li>
+<li>requirements.rst</li>
+<li>deliverables.rst</li>
+<li>changelog.rst</li>
+<li>template.rst</li>
+</ul>
+<p>Use <cite>template.rst</cite>  for all new pages.  Have a look at the <cite>nxtools</cite>,
+<cite>nxworker</cite> and <cite>nxsaveas</cite> projects for inspiration.</p>
+</div>
+<div class="section" id="makefile-targets">
+<h2>Makefile Targets<a class="headerlink" href="#makefile-targets" title="Permalink to this headline">¶</a></h2>
+<p>The makefile provides these useful targets:</p>
+<dl class="docutils">
+<dt><strong>make html</strong></dt>
+<dd>Create html pages from documentation to <cite>_build/html</cite></dd>
+<dt><strong>make preview</strong></dt>
+<dd>Open a browser viewing your local documentation</dd>
+<dt><strong>make view</strong></dt>
+<dd>Open a browser viewing the <strong>internally published</strong> version of your
+documentation.</dd>
+<dt><strong>make publish</strong></dt>
+<dd>Recreates local html and publishes internally.  Uses <cite>scp</cite> &#8211; you may
+want to add your ssh keys to your account on <cite>silverdwarf</cite>, ask your
+administrator for help.</dd>
+<dt><strong>make clean</strong></dt>
+<dd>Remove the generated local html.</dd>
+</dl>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The <a class="reference external" href="http://sphinx.pocoo.org/rest.html">Sphinx rst cheatsheet</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/nexiles_logo_white.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li><a class="reference internal" href="#bootstrap-sphinx">Bootstrap Sphinx</a></li>
+<li><a class="reference internal" href="#configure-python-path">Configure Python Path</a></li>
+<li><a class="reference internal" href="#set-nexiles-theme">Set nexiles theme</a></li>
+<li><a class="reference internal" href="#amend-makefile">Amend Makefile</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-mandatory-pages">Create Mandatory Pages</a></li>
+<li><a class="reference internal" href="#makefile-targets">Makefile Targets</a></li>
+<li><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="deliverables.html"
+                        title="previous chapter">Deliverables</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="next chapter">Changelog</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/tutorial.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="deliverables.html" title="Deliverables"
+             >previous</a> |</li>
+        <li><a href="index.html">nxsphinx v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, nexiles GmbH.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

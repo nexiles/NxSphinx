@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &mdash; nxsphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/nexiles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="nxsphinx v0.1 documentation" href="index.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
+    <link rel="prev" title="Welcome to the nexiles GmbH Documentation Project" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to the nexiles GmbH Documentation Project"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">nxsphinx v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Author:</th><td class="field-body">Stefan Eletzhofer</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>Professional software needs documentation.  Here, we&#8217;ll outline the rules
+we are to follow at <em>nexiles GmbH</em> when it comes to documentation.</p>
+<p>We need these rules, such that there&#8217;s no doubt what a developer is
+expected to document  &#8211; and more generally, what we expect of all the
+participants of a software project when it comes to <em>documentation</em></p>
+</div>
+<div class="section" id="participants-and-roles">
+<h2>Participants and Roles<a class="headerlink" href="#participants-and-roles" title="Permalink to this headline">¶</a></h2>
+<p>There are several <em>roles</em> which are involved in <em>writing</em> and <em>reviewing</em>
+the documentation:</p>
+<dl class="docutils">
+<dt><strong>The Developer Team</strong></dt>
+<dd>The guys who actually develop the software or methods &#8211; in <em>SCRUM</em>
+terms <strong>the team</strong> or <strong>the pigs</strong>.</dd>
+<dt><strong>The Team Lead &#8211; AKA The Master Of Disaster</strong></dt>
+<dd>The guy who&#8217;s responsible for the software project in question.  In
+<em>SCRUM</em> terms this would be the <strong>scrum master</strong>, better known as <strong>the
+single neck to wring</strong></dd>
+<dt><strong>The Customer Rep</strong></dt>
+<dd>The customer representative &#8211; in <em>SCRUM</em> terms this would perhaps be
+the <strong>product owner</strong></dd>
+<dt><strong>Power Users and/or Administrators</strong></dt>
+<dd>Users, administrators, deployment guys.  <strong>customers</strong></dd>
+</dl>
+</div>
+<div class="section" id="documentation-contents">
+<h2>Documentation Contents<a class="headerlink" href="#documentation-contents" title="Permalink to this headline">¶</a></h2>
+<p>What parts <em>MUST</em> be in present a documentation:</p>
+<dl class="docutils">
+<dt><strong>start page</strong></dt>
+<dd>Gives an <em>abstract</em> of the project and lists the main table of
+contents.</dd>
+<dt><strong>introduction page</strong></dt>
+<dd>An introduction to the project, listing its goals, components and
+perhaps the current state.</dd>
+<dt><strong>requirements page</strong></dt>
+<dd>A list <em>numbered</em> of <em>requirements</em> as identified by the <em>customer rep</em> and
+the <em>team lead</em>.  The requirements are high-level and represent the
+<strong>customer&#8217;s views and expectations</strong> on the outcome of the project.</dd>
+<dt><strong>deliverables</strong></dt>
+<dd><p class="first">A list of <em>deliverables</em> &#8211; that is, a list of artifacts which the
+<strong>team</strong> needs to deliver.  These artifacts need to implement the
+<em>requirements</em> as listed.</p>
+<p class="last">Note that the <em>documentation</em> itself is a <strong>mandatory deliverable</strong>, even
+if it&#8217;s not in the list of requirements.</p>
+</dd>
+<dt><strong>change log</strong></dt>
+<dd>A log of changes to the project &#8211; including <em>bug fixes</em>, <em>feature
+additions</em>, <em>documentation changes</em> and so on.</dd>
+</dl>
+</div>
+<div class="section" id="tools-used">
+<h2>Tools Used<a class="headerlink" href="#tools-used" title="Permalink to this headline">¶</a></h2>
+<p>We use the following tools to document our projects:</p>
+<dl class="docutils">
+<dt><strong>sphinx</strong></dt>
+<dd><p class="first">A documentation system using <em>restructured text</em> as source format and
+generates many output formats.</p>
+<p class="last"><a class="reference external" href="http://sphinx.pocoo.org">http://sphinx.pocoo.org</a></p>
+</dd>
+<dt><strong>GitHup Pages</strong></dt>
+<dd>We host our code at <strong>GitHub</strong> and we&#8217;ll use their <em>Github Pages</em>
+feature to host <strong>public</strong> documentation.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even though we can have <strong>private</strong> git repos at GitHub, we
+<strong>cannot</strong> have private <strong>documentation</strong> &#8211; all Github Pages are
+<strong>public</strong>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/nexiles_logo_white.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#goals">Goals</a></li>
+<li><a class="reference internal" href="#participants-and-roles">Participants and Roles</a></li>
+<li><a class="reference internal" href="#documentation-contents">Documentation Contents</a></li>
+<li><a class="reference internal" href="#tools-used">Tools Used</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to the nexiles GmbH Documentation Project</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="next chapter">Requirements</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/introduction.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to the nexiles GmbH Documentation Project"
+             >previous</a> |</li>
+        <li><a href="index.html">nxsphinx v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, nexiles GmbH.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
