@@ -2,7 +2,7 @@
 Changelog
 =========
 
-0.2 - unreleased
+0.2 - 2011-12-05
 ----------------
 
 - added missing 'html_theme' conf to tutorial.
