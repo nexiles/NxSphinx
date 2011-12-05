@@ -5,7 +5,7 @@ Changelog
 0.2 - unreleased
 ----------------
 
-no changes yet
+- added missing 'html_theme' conf to tutorial.
 
 0.1 - 2011-08-28
 ----------------

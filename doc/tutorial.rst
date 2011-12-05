@@ -64,6 +64,7 @@ Set nexiles theme
 
 Add / edit the following in `conf.py`::
 
+    html_theme = 'nexiles_theme'
     html_theme_path = [os.path.expanduser("~/develop/nexiles/NxSphinx/doc")]
     html_logo = "nexiles_theme/static/nexiles_logo_white.png"
 
