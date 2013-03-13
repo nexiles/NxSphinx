@@ -1,0 +1,208 @@
+/*
+ * nx_default.css
+ * ~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- default theme.
+ *
+ * :copyright: Copyright 2013 nexiles GmbH, Sven Schmid
+ * :license: BSD, see LICENSE for details.
+ *
+  */
+@import url("agogo.css");
+@import url("nexiles.css");
+
+/* -- page layout ----------------------------------------------------------- */
+body{
+    background-color: #ffffff;
+    overflow: scroll;
+}
+p{
+    color: #333;
+}
+div.header-wrapper {
+    background: none;
+    border-bottom: 0;
+    background-color: #fff;
+    margin: 5px;
+}
+div.header{
+    background: url("nexiles_logo_realywhite.png") no-repeat scroll right top transparent;
+    background-color: #76B41F;
+}
+div.header .headertitle {
+    font-family: "MerriweatherSans-Regular";
+    font-size: 180%;
+    font-weight: normal;
+}
+div.header h1 {
+    letter-spacing: 0!important;
+    border:none;
+}
+div.header .headertitle a {
+    color: #ffffff;
+}
+div.header div.rel a {
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+div.header, div.content, div.footer {
+    padding: 20px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100em;
+}
+div.content{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+div.document {
+    width: 80em;
+}
+
+div.sidebar {
+    width: 20em;
+}
+ul{
+    margin-top: 10px!important;
+    margin-bottom: 2px!important;
+}
+div.toctree-wrapper ul li{
+    list-style-type: none;
+}
+div.sidebar li.toctree-l1.current a {
+    border-right: 5px solid #76B41F;
+}
+div.toctree-wrapper li.toctree-l1{
+    font-family: "MerriweatherSans-Bold";
+    margin-bottom: 10px!important;
+    text-decoration: none!important;
+}
+div.toctree-wrapper li.toctree-l2,
+div.toctree-wrapper li.toctree-l3,
+div.toctree-wrapper li.toctree-l4,
+div.toctree-wrapper li.toctree-l5{
+    font-family: "MerriweatherSans-Light";
+}
+div.toctree-wrapper a{
+    text-decoration: none;
+}
+
+
+/* -- body styles ----------------------------------------------------------- */
+
+a.headerlink {
+    color: #c60f0f;
+    font-size: 0.8em;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    background-color: #c60f0f;
+    color: white;
+}
+
+div.body p, div.body dd, div.body li {
+    text-align: justify;
+    line-height: 130%;
+}
+
+div.admonition p.admonition-title + p {
+    display: inline;
+}
+
+div.admonition p {
+    margin-bottom: 5px;
+}
+
+div.admonition pre {
+    margin-bottom: 5px;
+}
+
+div.admonition ul, div.admonition ol {
+    margin-bottom: 5px;
+}
+
+div.note {
+    background-color: #EEEEEE;
+    border: 1px solid #ccc;
+}
+
+div.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+tt {
+    background-color: #ecf0f3;
+    padding: 0 1px 0 1px;
+    font-size: 0.95em;
+}
+
+
+
+.warning tt {
+    background: #efc2c2;
+}
+
+.note tt {
+    background: #d6d6d6;
+}
+
+.viewcode-back {
+    font-family: sans-serif;
+}
+
+div.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+table, tbody, th, thead{
+    border:1px solid #bbb;
+    padding:3px;
+}
+
+tr, td{
+    border-left: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    border-right: none;
+    border-top: none;
+    padding: 3px;
+}
+
+th {
+    background-color: #EEFFEE;
+    border-bottom-color: #76B41F;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;s
+    border-top-color: #76B41F;
+    border-top-style: solid;
+    border-top-width: 1px;
+}

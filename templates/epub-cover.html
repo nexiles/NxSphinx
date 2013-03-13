@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}"/>
+    {{ metatags }}
+
+    {%- block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
+    {%- for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
+    {%- endfor %}
+</head>
+
+<body class="coverbody">
+    <div id="coverimagecontainer">
+        <img id="cover-inside" src="_static/cover-inside.png" />
+    </div>
+    <div id="covertext">
+        <br/><br/>
+        <h1 id="projecttitle" class="cover">{{ title|striptags|e }}{{ titlesuffix }}</h1>
+        <h2 id="projectversion" class="cover">version: {{ version }}</h2>
+        <div id="copyright" class="discreet">&copy; copyright {{ copyright }}</div>
+    </div>
+</body>
+</html>
