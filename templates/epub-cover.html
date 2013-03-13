@@ -12,21 +12,20 @@
     {%- endblock %}
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
-    <script type="text/javascript" src="_static/insertSpan.js"></script>
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
     {%- endfor %}
 </head>
 
 <body class="coverbody">
-    <div class="cover">
-        <br/><img src="_static/nexiles_logo_white.png" />
+    <div id="coverimagecontainer">
+        <img id="cover-inside" src="_static/cover-inside.png" />
+    </div>
+    <div id="covertext">
         <br/><br/>
-        <h1 class="cover">{{ title|striptags|e }}{{ titlesuffix }}</h1>
-        <br/><br/>
-        <h2 class="cover">version: {{ version }}</h2>
-        <br/><br/>
-        <div class="discreet">&copy; copyright {{ copyright }}, nexiles GmbH</div>
+        <h1 id="projecttitle" class="cover">{{ title|striptags|e }}{{ titlesuffix }}</h1>
+        <h2 id="projectversion" class="cover">version: {{ version }}</h2>
+        <div id="copyright" class="discreet">&copy; copyright {{ copyright }}</div>
     </div>
 </body>
 </html>
