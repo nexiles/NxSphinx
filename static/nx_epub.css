@@ -1,0 +1,55 @@
+/*
+ * nx_epub.css
+ * ~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- default theme.
+ *
+ * :copyright: Copyright 2013 nexiles GmbH, Sven Schmid
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+/* -- page layout ----------------------------------------------------------- */
+@import url("nexiles.css");
+
+.coverbody {
+}
+
+.cover{
+    font-family: "MerriweatherSans-Light";
+    text-align: right;
+    color:#000;
+}
+#cover-inside{
+    width: 100%;
+    height:100%;
+}
+#covertext{
+    position: absolute;
+    right:30px;
+    top: 80px;
+    width: 70%;
+}
+h1.cover, h2.cover, h3.cover{
+    border-bottom: none;
+    text-align: right;
+}
+
+.discreet {
+    font-family: "MerriweatherSans-Light";
+    font-size: 8px;
+    text-align: right;
+    vertical-align: middle;
+    color:#ccc;
+}
+
+blockquote{
+    margin-left: 10px;
+}
+li{
+    margin-left: -10px;
+    clear:both;
+}
+pre{
+    font-family: "PT-Mono"!important;
+}
