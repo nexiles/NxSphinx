@@ -45,7 +45,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "MerriweatherSans-Regular"!important;
+    font-family: "MerriweatherSans-Bold"!important;
     color: #76B41F;
 }
 h1, h2 {
@@ -69,14 +69,6 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
-}
-
-pre {
-    font-family: "PT-Mono"!important;
-    font-size: 10px;
-    background: none repeat scroll 0 0 #eee;
-    border: 1px dotted #555;
-    margin-bottom: 7px;
 }
 
 div.note {
