@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}"/>
+    {{ metatags }}
+
+    {%- block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
+    <script type="text/javascript" src="_static/insertSpan.js"></script>
+    {%- for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
+    {%- endfor %}
+</head>
+
+<body class="coverbody">
+    <div class="cover">
+        <br/><img src="_static/nexiles_logo_white.png" />
+        <br/><br/>
+        <h1 class="cover">{{ title|striptags|e }}{{ titlesuffix }}</h1>
+        <br/><br/>
+        <h2 class="cover">version: {{ version }}</h2>
+        <br/><br/>
+        <div class="discreet">&copy; copyright {{ copyright }}, nexiles GmbH</div>
+    </div>
+</body>
+</html>

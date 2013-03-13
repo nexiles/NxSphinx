@@ -1,0 +1,98 @@
+@font-face {
+    font-family: MerriweatherSans-Light;
+    font-style: normal;
+    font-weight: lighter;
+    src:url("fonts/Merriweather_Sans/MerriweatherSans-Light.ttf");
+}
+@font-face {
+    font-family: MerriweatherSans-Regular;
+    font-style: normal;
+    font-weight: normal;
+    src:url("fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf");
+}
+@font-face {
+    font-family: MerriweatherSans-Bold;
+    font-style: normal;
+    font-weight: bold;
+    src:url("fonts/Merriweather_Sans/MerriweatherSans-Bold.ttf");
+}
+@font-face {
+    font-family: MerriweatherSans-ExtraBold;
+    font-style: normal;
+    font-weight: bolder;
+    src:url("fonts/Merriweather_Sans/MerriweatherSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: PT-Mono;
+    font-style: normal;
+    font-weight: normal;
+    src:url("fonts/PT_Mono/PTM55FT.ttf");
+}
+
+body {
+    font-family: "MerriweatherSans-Light";
+    font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "MerriweatherSans-Regular"!important;
+    color: #76B41F;
+}
+h1, h2 {
+    border-bottom: 1px dotted #ccc;
+}
+h2, h3, h4, h5 {
+    color: #111111;
+}
+
+/* -- hyperlink styles ------------------------------------------------------ */
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    font-family: "PT-Mono"!important;
+    font-size: 10px;
+    background: none repeat scroll 0 0 #eee;
+    border: 1px dotted #555;
+    margin-bottom: 7px;
+}
+
+div.note {
+    background-color: #EEEEEE;
+    border: 1px solid #ccc;
+}
+
+div.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
