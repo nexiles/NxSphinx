@@ -51,9 +51,6 @@ li{
     clear:both;
 }
 pre {
-    font-family: "PT-Mono"!important;
     font-size: 10px;
-    background: none repeat scroll 0 0 #eee;
-    border: 1px dotted #555;
     margin-bottom: 7px;
 }
