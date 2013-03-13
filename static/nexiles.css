@@ -45,7 +45,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "MerriweatherSans-Regular"!important;
+    font-family: "MerriweatherSans-Bold"!important;
     color: #76B41F;
 }
 h1, h2 {
@@ -56,7 +56,16 @@ h2, h3, h4, h5 {
 }
 
 /* -- hyperlink styles ------------------------------------------------------ */
-
+pre{
+    font-family: "PT-Mono"!important;
+    background: none repeat scroll 0 0 #eee;
+    border: 1px dotted #555;
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
+}
 a {
     color: #666666;
     text-decoration: none;
@@ -69,14 +78,6 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
-}
-
-pre {
-    font-family: "PT-Mono"!important;
-    font-size: 10px;
-    background: none repeat scroll 0 0 #eee;
-    border: 1px dotted #555;
-    margin-bottom: 7px;
 }
 
 div.note {

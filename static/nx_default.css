@@ -15,9 +15,16 @@
 body{
     background-color: #ffffff;
     overflow: scroll;
+    font-family: "MerriweatherSans-Regular";
+    font-size: 13px;
 }
-p{
-    color: #333;
+
+pre {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+strong{
+    font-family: "MerriweatherSans-Bold";
 }
 div.header-wrapper {
     background: none;
@@ -33,6 +40,8 @@ div.header .headertitle {
     font-family: "MerriweatherSans-Regular";
     font-size: 180%;
     font-weight: normal;
+    line-height: 27px;
+    max-width: 70%;
 }
 div.header h1 {
     letter-spacing: 0!important;
@@ -52,7 +61,8 @@ div.header, div.content, div.footer {
     margin: 5px;
     margin-left: auto;
     margin-right: auto;
-    width: 100em;
+    max-width: 100em;
+    width: auto;
 }
 div.content{
     padding-top: 0px;
@@ -64,11 +74,12 @@ div.content{
 }
 
 div.document {
-    width: 80em;
+    max-width: 80em;
+    width: auto;
 }
 
 div.sidebar {
-    width: 20em;
+    max-width: 20em;
 }
 ul{
     margin-top: 10px!important;
@@ -163,8 +174,6 @@ tt {
     padding: 0 1px 0 1px;
     font-size: 0.95em;
 }
-
-
 
 .warning tt {
     background: #efc2c2;

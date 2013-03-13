@@ -50,6 +50,7 @@ li{
     margin-left: -10px;
     clear:both;
 }
-pre{
-    font-family: "PT-Mono"!important;
+pre {
+    font-size: 10px;
+    margin-bottom: 7px;
 }
