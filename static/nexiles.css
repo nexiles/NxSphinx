@@ -80,9 +80,23 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+div.admonition {
+    padding: 8px 20px 8px 8px;
+}
+
 div.note {
-    background-color: #EEEEEE;
-    border: 1px solid #ccc;
+    background-color: #ffe9c1;
+    border-left: 12px solid rgb(118, 180, 31);
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border-left: 12px solid #f66;
 }
 
 div.seealso {
@@ -92,11 +106,6 @@ div.seealso {
 
 div.topic {
     background-color: #eee;
-}
-
-div.warning {
-    background-color: #ffe4e4;
-    border: 1px solid #f66;
 }
 
 p.admonition-title {

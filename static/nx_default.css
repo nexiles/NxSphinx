@@ -142,8 +142,12 @@ div.admonition ul, div.admonition ol {
     margin-bottom: 5px;
 }
 
+/*
+ * these styles are duplicates -- they're already defined in nexiles.css.
+ * ----------------------------------------------------------------------
+
 div.note {
-    background-color: #EEEEEE;
+    background-color: #ffe9c1;
     border: 1px solid #ccc;
 }
 
@@ -169,6 +173,7 @@ p.admonition-title:after {
     content: ":";
 }
 
+*/
 tt {
     background-color: #ecf0f3;
     padding: 0 1px 0 1px;
