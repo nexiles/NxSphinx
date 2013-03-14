@@ -91,7 +91,7 @@ div.admonition {
 
 div.note {
     background-color: #ffe9c1;
-    border-left: 12px solid rgb(118, 180, 31);
+    border-left: 12px solid rgb(118, 180, 31);  /* nexiles green */
 }
 
 div.warning {

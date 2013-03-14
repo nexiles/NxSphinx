@@ -106,6 +106,37 @@ div.toctree-wrapper a{
     text-decoration: none;
 }
 
+/* -- heading styles -------------------------------------------------------- */
+
+
+
+div.section h1 {
+    border-top:    1px  solid rgb(118, 180, 31);  /* nexiles green */
+    border-left:   20px solid rgb(118, 180, 31);  /* nexiles green */
+    border-bottom: 1px  solid rgb(118, 180, 31);  /* nexiles green */
+
+    padding:       20px;
+    margin-bottom:  48px;
+}
+
+div.section h2 {
+    border-left:   15px solid rgb(118, 180, 31);  /* nexiles green */
+    border-bottom: 1px  solid rgb(118, 180, 31);  /* nexiles green */
+
+    padding:       15px;
+    margin-bottom:  38px;
+}
+
+div.section h3 {
+    border-left:    1px solid rgb(118, 180, 31);  /* nexiles green */
+    border-bottom:  1px solid rgb(118, 180, 31);  /* nexiles green */
+
+    padding-left:   30px;
+    padding-top:    15px;
+    padding-bottom: 8px;
+    margin-bottom:  28px;
+}
+
 
 /* -- body styles ----------------------------------------------------------- */
 
