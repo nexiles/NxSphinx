@@ -44,28 +44,100 @@ body {
     font-size: 12px;
 }
 
+div.body{
+    padding-left: 2em;
+}
+
+/* -- heading styles -------------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "MerriweatherSans-Bold"!important;
     color: #76B41F;
 }
-h1, h2 {
-    border-bottom: 1px dotted #ccc;
-}
-h2, h3, h4, h5 {
-    color: #111111;
+
+h2, h3, h4, h5, h6 {
+    margin-top: 3em;
 }
 
-/* -- hyperlink styles ------------------------------------------------------ */
+h1, h2 {
+    border-bottom: 1px  solid rgb(118, 180, 31);  /* nexiles green */
+}
+
+h1{
+    padding:       15px;
+    border-left:   15px solid rgb(118, 180, 31);  /* nexiles green */
+    margin-left: -20px!important:
+}
+
+h2{
+    page-break-before:auto;
+    padding:       5px;
+    border-left:   5px solid rgb(118, 180, 31);  /* nexiles green */
+    margin-left: -20px!important:
+}
+h3, h4, h5 {
+    color: #000;
+    text-decoration: underline;
+}
+
+.section{
+    margin-bottom:2em;
+}
+p{
+    margin-bottom:0.5em;
+}
+dt{
+    padding-top:0.4em;
+}
+
+/* ---------spezial textblocks---------------------------------*/
+
 pre{
     font-family: "PT-Mono"!important;
     background: none repeat scroll 0 0 #eee;
     border: 1px dotted #555;
+    padding:1em;
     white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
     white-space: -pre-wrap; /* Opera */
     white-space: -o-pre-wrap; /* Opera */
     white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
     word-wrap: break-word; /* IE 5.5+ */
 }
+div.admonition {
+    padding: 8px 20px 8px 8px;
+}
+
+div.note {
+    background-color: #ffe9c1;
+    border-left: 2px solid rgb(118, 180, 31);  /* nexiles green */
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border-left: 2px solid #f66;
+}
+
+div.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+.admonition-title {
+    font-family: "MerriweatherSans-Bold"!important;
+    display: inline;
+}
+
+.admonition-title:after {
+    content: ":";
+}
+
+
+
+/* -- hyperlink styles ------------------------------------------------------ */
 a {
     color: #666666;
     text-decoration: none;
@@ -84,37 +156,5 @@ img {
     margin-top: 28px;
     margin-bottom: 28px;
 }
-
-div.admonition {
-    padding: 8px 20px 8px 8px;
-}
-
-div.note {
-    background-color: #ffe9c1;
-    border-left: 12px solid rgb(118, 180, 31);  /* nexiles green */
-}
-
-div.warning {
-    background-color: #ffe4e4;
-    border-left: 12px solid #f66;
-}
-
-div.seealso {
-    background-color: #ffc;
-    border: 1px solid #ff6;
-}
-
-div.topic {
-    background-color: #eee;
-}
-
-p.admonition-title {
-    display: inline;
-}
-
-p.admonition-title:after {
-    content: ":";
-}
-
 
 /* vim: set ft=css ts=4 sw=4 expandtab tw=78 : */

@@ -15,21 +15,28 @@
 .coverbody {
 }
 
+span.link-target{
+    display: none;
+}
+
 .cover{
     font-family: "MerriweatherSans-Light";
     text-align: right;
     color:#000;
 }
+
 #cover-inside{
     width: 100%;
     height:100%;
 }
+
 #covertext{
     position: absolute;
     right:30px;
     top: 80px;
     width: 70%;
 }
+
 h1.cover, h2.cover, h3.cover{
     border-bottom: none;
     text-align: right;
