@@ -115,3 +115,6 @@ p.admonition-title {
 p.admonition-title:after {
     content: ":";
 }
+
+
+/* vim: set ft=css ts=4 sw=4 expandtab tw=78 : */
