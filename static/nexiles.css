@@ -87,14 +87,14 @@ p{
     margin-bottom:0.5em;
 }
 dt{
-    padding-top:0.4em;
+    padding-top:1em;
 }
 
 /* ---------spezial textblocks---------------------------------*/
 
 pre{
     font-family: "PT-Mono"!important;
-    background: none repeat scroll 0 0 #eee;
+    background: none repeat scroll 0 0 #eeffee;
     border: 1px dotted #555;
     padding:1em;
     white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
@@ -105,6 +105,7 @@ pre{
 }
 div.admonition {
     padding: 8px 20px 8px 8px;
+    margin-top: 5px;
 }
 
 div.note {
@@ -135,7 +136,9 @@ div.topic {
     content: ":";
 }
 
-
+table{
+    margin-bottom:1em;
+}
 
 /* -- hyperlink styles ------------------------------------------------------ */
 a {
