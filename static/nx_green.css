@@ -16,3 +16,7 @@ div.highlight-python div.highlight, div.highlight-python pre {
     border-top: 2px solid #76B41F;  /* nexiles green */
     border-bottom: 2px solid #76B41F;  /* nexiles green */
 }
+div.header{
+    background: url("nexiles_logo_realywhite.png") no-repeat scroll right top transparent;
+    background-color: #76B41F;
+}
