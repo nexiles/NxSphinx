@@ -1,0 +1,18 @@
+/*
+#  nexiles-patrol: #00323a
+#  nexiles-green: #76B41F
+#
+#
+#
+*/
+@import url("nx_default.css");
+
+h1, h2, h3, h4, h5, h6 {
+    color: #76B41F;
+}
+
+div.highlight-python div.highlight, div.highlight-python pre {
+    background-color: #eeffee;
+    border-top: 2px solid #76B41F;  /* nexiles green */
+    border-bottom: 2px solid #76B41F;  /* nexiles green */
+}

@@ -5,53 +5,101 @@
 #
 #
 */
-
-
-@font-face {
-    font-family: MerriweatherSans-Light;
-    font-style: normal;
-    font-weight: lighter;
-    src:url("fonts/Merriweather_Sans/MerriweatherSans-Light.ttf");
-}
-@font-face {
-    font-family: MerriweatherSans-Regular;
-    font-style: normal;
-    font-weight: normal;
-    src:url("fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf");
-}
-@font-face {
-    font-family: MerriweatherSans-Bold;
-    font-style: normal;
-    font-weight: bold;
-    src:url("fonts/Merriweather_Sans/MerriweatherSans-Bold.ttf");
-}
-@font-face {
-    font-family: MerriweatherSans-ExtraBold;
-    font-style: normal;
-    font-weight: bolder;
-    src:url("fonts/Merriweather_Sans/MerriweatherSans-ExtraBold.ttf");
-}
+@import url("bootstrap/css/bootstrap.min.css");
+@import url("bootstrap/css/bootstrap-responsive.min.css");
 
 @font-face {
-    font-family: PT-Mono;
-    font-style: normal;
-    font-weight: normal;
-    src:url("fonts/PT_Mono/PTM55FT.ttf");
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format('woff');
 }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGC7eGk4PJkA83J1AXCmgUfc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightIt'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold Italic'), local('SourceSansPro-SemiboldIt'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/fpTVHK8qsXbIeTHTrnQH6J4LxuTxC3JbLqy8IUt0K1T3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Code Pro Light'), local('SourceCodePro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v3/leqv3v-yTsJNC7nFznSMqcVNtom4QlEDNJaqqqzqdSs.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Code Pro Semibold'), local('SourceCodePro-Semibold'), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v3/leqv3v-yTsJNC7nFznSMqSmgpmuQqK2I-L2S9cF65Ek.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Code Pro Black'), local('SourceCodePro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v3/leqv3v-yTsJNC7nFznSMqS7eGk4PJkA83J1AXCmgUfc.woff) format('woff');
+}
+
+
 
 body {
-    font-family: "MerriweatherSans-Light";
-    font-size: 12px;
-}
-
-div.body{
-    padding-left: 2em;
+    font-family: "Source Sans Pro", "Trebuchet MS", sans-serif!important;
+    font-size: 12pt;
+    font-weight: 300;
 }
 
 /* -- heading styles -------------------------------------------------------- */
 
+div.body{
+    padding-left: 2em;
+}
+.admonition-title {
+    display: inline;
+}
+
+h1{
+    font-size:24pt;
+    font-weight: 900;
+}
+h2{
+    font-size:18pt;
+    font-weight: 700;
+}
+h3{
+    font-size:14pt;
+    font-weight: 600;
+}
+h4{
+    font-size:12pt;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "MerriweatherSans-Bold"!important;
     color: #76B41F;
 }
 
@@ -59,7 +107,7 @@ h2, h3, h4, h5, h6 {
     margin-top: 3em;
 }
 
-h1, h2 {
+h1{
     border-bottom: 1px  solid rgb(118, 180, 31);  /* nexiles green */
 }
 
@@ -71,11 +119,8 @@ h1{
 
 h2{
     page-break-before:auto;
-    padding:       5px;
-    border-left:   5px solid rgb(118, 180, 31);  /* nexiles green */
-    margin-left: -20px!important:
 }
-h3, h4, h5 {
+h4, h5 {
     color: #000;
     text-decoration: underline;
 }
@@ -85,6 +130,7 @@ h3, h4, h5 {
 }
 p{
     margin-bottom:0.5em;
+    white-space: pre-line;
 }
 dt{
     padding-top:1em;
@@ -92,11 +138,13 @@ dt{
 
 /* ---------spezial textblocks---------------------------------*/
 
+.simple li{
+    white-space: pre-line;
+}
 
 div.highlight-python div.highlight pre {
     border: none;
     padding: none;
-    margin: none;
 }
 
 div.highlight-python div.highlight, div.highlight-python pre {
@@ -104,7 +152,8 @@ div.highlight-python div.highlight, div.highlight-python pre {
     border-top: 2px solid rgb(118, 180, 31);  /* nexiles green */
     border-bottom: 2px solid rgb(118, 180, 31);  /* nexiles green */
 
-    font-family: "PT-Mono"!important;
+    font-family: "Source Code Pro", courier!important;
+    font-weight: 300;
     background: none repeat scroll 0 0 #eeffee;
     padding:1em;
     white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
@@ -138,11 +187,6 @@ div.seealso {
 
 div.topic {
     background-color: #eee;
-}
-
-.admonition-title {
-    font-family: "MerriweatherSans-Bold"!important;
-    display: inline;
 }
 
 .admonition-title:after {
