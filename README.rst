@@ -129,7 +129,6 @@ BOOTSTRAP-THEME
 ===============
 
 pip install sphinx_bootstrap_theme
-
 ::
 
 import sys, os, sphinx_bootstrap_theme
@@ -141,7 +140,6 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 NEXILES-GREEN-THEME
 ===================
-
 ::
 
 html_theme = 'nexiles_green'
@@ -150,7 +148,6 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/them
 
 NEXILES-PETROL-THEME
 ====================
-
 ::
 
 html_theme = 'nexiles_petrol'
@@ -159,7 +156,6 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/them
 
 NEXILES-CLASSIC
 ===============
-
 ::
 
 html_logo = './nexiles_logo_white.png'
@@ -169,8 +165,6 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/doc"
 
 for generating EBOOKs add following lines:
 ==========================================
-
-
 ::
 
 epub_title = u'Developer Documentation'
@@ -187,14 +181,12 @@ epub_tocdup = False
 
 Epub publishing with fixed fonts is not by default supported on ipad.
 To solve this, you have to link the META-INF directory into your docs-folder.
-
 ::
 
 cd docs
 ln -s ~/develop/nexiles/NxSphinx/META-INF META-INF
 
 and after every **make epub** you will have to add the file from the META-INF folder
-
 ::
 
 zip -r0 _build/epub/NAMEOFYOURFILE.epub META-INF
