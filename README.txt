@@ -125,29 +125,43 @@ file itself and at http://sphinx.pocoo.org/config.html
 
 .. note:: please be sure to add/edit lines below in your conf.py
 
-The most important ones are:
-----------------------------
+BOOTSTRAP-THEME
+---------------
 
--   **extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest']**, where 'autodoc' enables automatic
-    docstring parsing and 'doctest' enables the automatic doctest function integrated in sphinx
+pip install sphinx_bootstrap_theme
 
--   **add_module_names = True**, append module names to functions etc.
+.. code-block:: python
 
--   **html_theme = 'nexiles_theme'**, the theme (css, js etc.) used to display documentation
-
--   **templates_path = ['_templates',os.path.expanduser("~/develop/nexiles/NxSphinx/templates")]
-
--   **html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/themes")]
-
--   **html_static_path = ['_static',os.path.expanduser("~/develop/nexiles/NxSphinx/static")]
+import sys, os, sphinx_bootstrap_theme
+templates_path = ['_templates',os.path.expanduser("~/develop/nexiles/NxSphinx/templates")]
+html_static_path = ['_static',os.path.expanduser("~/develop/nexiles/NxSphinx/static")]
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 
-if you want to use the pre2013-htmltheme:
------------------------------------------
+NEXILES-GREEN-THEME
+-------------------
+.. code-block:: python
 
--   **html_logo = './nexiles_logo_white.png'**, the logo placed above the sidebar
+html_theme = 'nexiles_green'
+html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/themes")]
 
--   **html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/doc")]
+
+NEXILES-PETROL-THEME
+--------------------
+.. code-block:: python
+
+html_theme = 'nexiles_petrol'
+html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/themes")]
+
+
+NEXILES-CLASSIC
+---------------
+.. code-block:: python
+
+html_logo = './nexiles_logo_white.png'
+html_theme = 'nexiles_theme'
+html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/doc")]
 
 
 for generating EBOOKs add following lines:
