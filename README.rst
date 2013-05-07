@@ -130,7 +130,7 @@ BOOTSTRAP-THEME
 
 pip install sphinx_bootstrap_theme
 
-.. code-block:: python
+::
 
 import sys, os, sphinx_bootstrap_theme
 templates_path = ['_templates',os.path.expanduser("~/develop/nexiles/NxSphinx/templates")]
@@ -141,7 +141,8 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 NEXILES-GREEN-THEME
 ===================
-.. code-block:: python
+
+::
 
 html_theme = 'nexiles_green'
 html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/themes")]
@@ -149,7 +150,8 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/them
 
 NEXILES-PETROL-THEME
 ====================
-.. code-block:: python
+
+::
 
 html_theme = 'nexiles_petrol'
 html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/themes")]
@@ -157,7 +159,8 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/them
 
 NEXILES-CLASSIC
 ===============
-.. code-block:: python
+
+::
 
 html_logo = './nexiles_logo_white.png'
 html_theme = 'nexiles_theme'
@@ -167,7 +170,8 @@ html_theme_path = ['_themes',os.path.expanduser("~/develop/nexiles/NxSphinx/doc"
 for generating EBOOKs add following lines:
 ==========================================
 
-.. code-block:: python
+
+::
 
 epub_title = u'Developer Documentation'
 epub_author = u'nexiles GmbH'
@@ -184,13 +188,15 @@ epub_tocdup = False
 Epub publishing with fixed fonts is not by default supported on ipad.
 To solve this, you have to link the META-INF directory into your docs-folder.
 
->>>
+::
+
 cd docs
 ln -s ~/develop/nexiles/NxSphinx/META-INF META-INF
 
 and after every **make epub** you will have to add the file from the META-INF folder
 
->>>
+::
+
 zip -r0 _build/epub/NAMEOFYOURFILE.epub META-INF
 
 To use your own cover create a directory in docs named **_static** and save your cover as cover.png there.
