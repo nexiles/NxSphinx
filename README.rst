@@ -153,31 +153,31 @@ if you want to use the pre2013-htmltheme:
 for generating EBOOKs add following lines:
 ----------------------------------------
 
-.. code-block:: python
+::
 
-epub_title = u'Developer Documentation'
-epub_author = u'nexiles GmbH'
-epub_publisher = u'nexiles GmbH'
-epub_copyright = u'2013, nexiles GmbH'
-epub_theme = 'nexiles_epub_theme'
-epub_exclude_files = ['_static/opensearch.xml', '_static/doctools.js',
-    '_static/jquery.js', '_static/searchtools.js', '_static/underscore.js',
-    '_static/basic.css', 'search.html', '_static/websupport.js']
-epub_cover = ("_static/cover.png", "epub-cover.html")
-epub_tocdepth = 1
-epub_tocdup = False
+    epub_title = u'Developer Documentation'
+    epub_author = u'nexiles GmbH'
+    epub_publisher = u'nexiles GmbH'
+    epub_copyright = u'2013, nexiles GmbH'
+    epub_theme = 'nexiles_epub_theme'
+    epub_exclude_files = ['_static/opensearch.xml', '_static/doctools.js',
+        '_static/jquery.js', '_static/searchtools.js', '_static/underscore.js',
+        '_static/basic.css', 'search.html', '_static/websupport.js']
+    epub_cover = ("_static/cover.png", "epub-cover.html")
+    epub_tocdepth = 1
+    epub_tocdup = False
 
 Epub publishing with fixed fonts is not by default supported on ipad.
 To solve this, you have to link the META-INF directory into your docs-folder.
-
->>>
-cd docs
-ln -s ~/develop/nexiles/NxSphinx/META-INF META-INF
+::
+    >>>
+    cd docs
+    ln -s ~/develop/nexiles/NxSphinx/META-INF META-INF
 
 and after every **make epub** you will have to add the file from the META-INF folder
-
->>>
-zip -r0 _build/epub/NAMEOFYOURFILE.epub META-INF
+::
+    >>>
+    zip -r0 _build/epub/NAMEOFYOURFILE.epub META-INF
 
 To use your own cover create a directory in docs named **_static** and save your cover as cover.png there.
 
