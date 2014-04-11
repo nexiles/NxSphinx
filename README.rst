@@ -164,7 +164,7 @@ NEXILES-CLASSIC
 
 
 for generating EBOOKs add following lines:
-==========================================
+----------------------------------------
 ::
 
     epub_title = u'Developer Documentation'
