@@ -169,14 +169,14 @@ for generating EBOOKs add following lines:
 
 Epub publishing with fixed fonts is not by default supported on ipad.
 To solve this, you have to link the META-INF directory into your docs-folder.
+
 ::
-    >>>
     cd docs
     ln -s ~/develop/nexiles/NxSphinx/META-INF META-INF
 
 and after every **make epub** you will have to add the file from the META-INF folder
+
 ::
-    >>>
     zip -r0 _build/epub/NAMEOFYOURFILE.epub META-INF
 
 To use your own cover create a directory in docs named **_static** and save your cover as cover.png there.
